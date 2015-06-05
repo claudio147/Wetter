@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Wetterapplikation</title>
+	<meta charset="UTF-8">
+	<title>Mobile Testseite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.css" />
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
+<div data-role="page">
 
-<h1>Meine Wetterapplikation</h1>
-<p>Guten Morgen</p>
+	<div data-role="header">
+		<h1>Willkommen</h1>
+	</div><!-- /header -->
 
-<h3 class="temp"></h3>
-<p class="license"></p>
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="script.js"></script>
+	<div role="main" class="ui-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quae reiciendis qui dignissimos ab fuga dolores laborum blanditiis perferendis eaque, commodi vitae cum cupiditate hic repudiandae provident. Dolorum, quo, ratione.</p>
+		<img width="100%" src="img/meer.jpg" alt="meer">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta ea tempora amet libero quia odit similique, cupiditate totam, ullam obcaecati quisquam. Quibusdam officia voluptates eaque, nesciunt consequatur expedita autem!</p>
+	</div>
 
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 </body>
 </html>
