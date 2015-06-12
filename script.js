@@ -13,7 +13,18 @@ $(document).ready(function(){
 		}).done(function(data){
 			$('.temperature').text(data.currently.apparentTemperature+' °C');
 			console.log(data);
-		});
+
+			//google geocoding
+			$.ajax({
+				url: 'https://maps.googleapis.com/maps/api/geocode/json',
+				data: {
+					latlng: koordinaten.latitude+','+koordinaten.longitude,
+					key: 'AIzaSyA7MONAVCxf543QLoLLcTGRNcSorGOi0zc',
+					language: 'de'
+				}
+			}).done(function(data)){
+				console.log(data);
+			}
 	});
 });
 
