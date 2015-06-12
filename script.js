@@ -11,7 +11,7 @@ $(document).ready(function(){
 			},
 			dataType: 'jsonp'
 		}).done(function(data){
-			$('.temperature').text(data.currently.apparentTemperature);
+			$('.temperature').text(data.currently.apparentTemperature+' °C');
 			console.log(data);
 		});
 	});
