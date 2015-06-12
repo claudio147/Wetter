@@ -22,10 +22,9 @@ $(document).ready(function(){
 					key: 'AIzaSyA7MONAVCxf543QLoLLcTGRNcSorGOi0zc',
 					language: 'de'
 				}
-			}).done(function(data)){
+			}).done(function(data){
 				console.log(data);
-			}
-	});
+			});
 });
 
 		/*
