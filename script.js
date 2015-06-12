@@ -19,7 +19,7 @@ $(document).ready(function(){
 				url: 'https://maps.googleapis.com/maps/api/geocode/json',
 				data:{
 					latlng: koordinaten.latitude+','+koordinaten.longitude,
-					key: 'AIzaSyA7MONAVCxf543QLoLLcTGRNcSorGOi0zc',
+					key: 'AIzaSyDgYh-UffzCV54XCcReML4WSqyb0_zv8x8',
 					language: 'de'
 				}
 			}).done(function(data){
