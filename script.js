@@ -21,7 +21,7 @@ $(document).ready(function(){
 			units: 'si',
 			lang: 'de'
 		},
-		dataType: 'jsonp';
+		dataType: 'jsonp'
 	}).done(function(data){
 		console.log(data);
 	})
