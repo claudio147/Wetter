@@ -6,18 +6,15 @@ $(document).ready(function(){
 		$.ajax({
 			url: 'https://api.forecast.io/forecast/2c3248b853cc8517e69d06caa732df2a/'+koordinaten.latitude+','+koordinaten.longitude,
 			data:{
-			units: 'si',
-			lang: 'de'
+				units: 'si',
+				lang: 'de'
 			},
 			dataType: 'jsonp'
-			}).done(function(data){
+		}).done(function(data){
+			$('.temperature').text(data.currently.apparentTemperature);
 			console.log(data);
+		});
 	});
-
-
-	});
-
-
 });
 
 		/*
