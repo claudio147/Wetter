@@ -44,7 +44,7 @@ $(document).ready(function(){
 	skycons.play();
 
 	setTimeout(function(){
-		skycons.set($('.js-icon')[0], Skycons.+icon);
+		skycons.set($('.js-icon')[0], Skycons.PARTLY_CLOUDY_DAY);
 	}, 5000);
 
 });
