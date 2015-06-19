@@ -21,7 +21,7 @@ $(document).ready(function(){
 			$('.temperature').text(data.currently.apparentTemperature+' °C');
 			$('.wettertext').text(data.currently.summary);
 			$('.tempMAX').text('Temperatur max: '+data.daily.data[0].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[0].apparentTemperatureMin);
-			$('.license').text(data.flags.metno-license);
+			$('.license').text(data.flags[metno-license]);
 			icon= data.currently.icon.toUpperCase();
 			console.log(icon);
 			console.log(data);
