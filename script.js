@@ -28,6 +28,17 @@ $(document).ready(function(){
 			});
 		});
 	});
+
+
+	var skycons= new Skycons({
+		color: "grey",
+		resizeClear: true
+	});
+
+	skycons.add($('.js-icon')[0], Skycons.RAIN);
+
+	skycons.play();
+
 });
 
 /*
@@ -35,3 +46,4 @@ $('.longitude').text(position.coords.longitude);
 $('.latitude').text(position.coords.latitude);
 $('.accuracy').text(position.coords.accuracy);
 */
+
