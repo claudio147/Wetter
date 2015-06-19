@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 	
 
-	skycons.add($('.js-icon')[0], Skycons.+icon);
+	skycons.add($('.js-icon')[0], Skycons.icon);
 
 	skycons.play();
 
