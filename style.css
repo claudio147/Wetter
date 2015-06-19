@@ -13,6 +13,11 @@
 	text-align: center;
 }
 
+.license{
+	font-size: 10px;
+	text-align: center;
+}
+
 canvas{
 	height: 128px;
 	width: 256px;
