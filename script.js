@@ -17,7 +17,7 @@ $(document).ready(function(){
 			dataType: 'jsonp'
 		}).done(function(data){
 			$('.temperature').text(data.currently.apparentTemperature+' °C');
-			var icon= data.currently.icon;
+			var icon= data.currently.icon.toUpperCase();
 			console.log(icon);
 			console.log(data);
 
