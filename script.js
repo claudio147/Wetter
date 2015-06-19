@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var icon;
 
 	var skycons= new Skycons({
 		color: "grey",
@@ -17,9 +18,13 @@ $(document).ready(function(){
 			dataType: 'jsonp'
 		}).done(function(data){
 			$('.temperature').text(data.currently.apparentTemperature+' °C');
-			var icon= data.currently.icon.toUpperCase();
+			icon= data.currently.icon.toUpperCase();
 			console.log(icon);
 			console.log(data);
+
+			skycons.set($('.js-icon')[0], icon);
+
+			skycons.play();
 
 			//google geocoding
 			$.ajax({
@@ -39,15 +44,14 @@ $(document).ready(function(){
 
 	
 
-	skycons.add($('.js-icon')[0], Skycons.icon);
 
-	skycons.play();
-
+/*
 	setTimeout(function(){
 		skycons.set($('.js-icon')[0], Skycons.PARTLY_CLOUDY_DAY);
 	}, 5000);
 
 });
+*/
 
 /*
 $('.longitude').text(position.coords.longitude);
