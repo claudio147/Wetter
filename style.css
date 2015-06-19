@@ -8,6 +8,11 @@
 	text-align: center;
 }
 
+.tempMAX{
+	font-size: 15px;
+	text-align: center;
+}
+
 canvas{
 	height: 128px;
 	width: 256px;

@@ -20,6 +20,7 @@ $(document).ready(function(){
 		}).done(function(data){
 			$('.temperature').text(data.currently.apparentTemperature+' °C');
 			$('.wettertext').text(data.currently.summary);
+			$('.tempMAX').text('Temperatur max: '+data.daily.data[0].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[0].apparentTemperatureMin);
 			icon= data.currently.icon.toUpperCase();
 			console.log(icon);
 			console.log(data);
