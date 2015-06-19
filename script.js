@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	var icon;
 
 	var skycons= new Skycons({
@@ -41,7 +42,7 @@ $(document).ready(function(){
 		});
 	});
 
-
+});
 	
 
 
