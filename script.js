@@ -19,11 +19,12 @@ $(document).ready(function(){
 			dataType: 'jsonp'
 		}).done(function(data){
 			$('.temperature').text(data.currently.apparentTemperature+' °C');
+			$('.wettertext').text(data.currently.summary);
 			icon= data.currently.icon.toUpperCase();
 			console.log(icon);
 			console.log(data);
 
-			skycons.set($('.js-icon')[0], icon);
+			skycons.add($('.js-icon')[0], icon);
 
 			skycons.play();
 

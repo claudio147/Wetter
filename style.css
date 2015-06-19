@@ -3,6 +3,11 @@
 	text-align: center;
 }
 
+.wettertext{
+	font-size: 15px;
+	text-align: center;
+}
+
 canvas{
 	height: 128px;
 	width: 256px;
