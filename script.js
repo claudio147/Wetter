@@ -2,12 +2,12 @@ $(document).ready(function(){
 	
 	var icon;
 	var icon_tom;
-
 	var skycons= new Skycons({
 		color: "grey",
 		resizeClear: true
 	});
 	var koordinaten;
+
 	navigator.geolocation.getCurrentPosition(function(position){
 		koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
 
@@ -72,8 +72,10 @@ $(document).ready(function(){
 
 		var marker = new google.maps.Marker({
 			position: latlng,
-			map: map
+			map: map,
+			animation: google.maps.Animation.DROP
 		});
+		marker.setAnimation(google.maps.Animation.BOUNCE);
 	}
 
 });
