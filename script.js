@@ -7,10 +7,13 @@ $(document).ready(function(){
 		color: "grey",
 		resizeClear: true
 	});
-
+	var koordinaten;
 	navigator.geolocation.getCurrentPosition(function(position){
-		var koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
+		koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
 
+		drawMap(new google.maps.LatLng(koordinaten.latitude, koordinaten.longitude));
+
+		//forecast.io
 		$.ajax({
 			url: 'https://api.forecast.io/forecast/2c3248b853cc8517e69d06caa732df2a/'+koordinaten.latitude+','+koordinaten.longitude,
 			data:{
@@ -53,6 +56,25 @@ $(document).ready(function(){
 			});
 		});
 	});
+
+	$(document).on('pageshow', '#map', function(){
+		console.log(koordinaten);
+		drawMap(new google.maps.LatLng(koordinaten.latitude, koordinaten.longitude));
+	});
+
+	function drawMap(latlng) {
+		var myOptions = {
+			zoom: 10,
+			center: latlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map($('.map-canvas')[0], myOptions);
+
+		var marker = new google.maps.Marker({
+			position: latlng,
+			map: map
+		});
+	}
 
 });
 	
