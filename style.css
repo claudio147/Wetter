@@ -3,12 +3,12 @@
 	text-align: center;
 }
 
-.wettertext{
+.wettertext, .wettertext_tomorrow{
 	font-size: 15px;
 	text-align: center;
 }
 
-.tempMAX{
+.tempMAX, .tempMAX_tomorrow{
 	font-size: 15px;
 	text-align: center;
 }

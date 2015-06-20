@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	
 	var icon;
+	var icon_tom;
 
 	var skycons= new Skycons({
 		color: "grey",
@@ -23,10 +24,16 @@ $(document).ready(function(){
 			$('.tempMAX').text('Temperatur max: '+data.daily.data[0].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[0].apparentTemperatureMin);
 			$('.footer').text(data.flags["metno-license"]);
 			icon= data.currently.icon.toUpperCase();
+
+			$('.tempMAX_tomorrow').text('Temperatur max: '+data.daily.data[1].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[1].apparentTemperatureMin);
+			$('.wettertext_tomorrow').text(data.daily[1].summary);
+			icon_tom= data.daily.data[1].icon.toUpperCase();
+
 			console.log(icon);
 			console.log(data);
 
 			skycons.add($('.js-icon')[0], icon);
+			skycons.add($('.js-icon_tomorrow')[0], icon_tom);
 
 			skycons.play();
 
