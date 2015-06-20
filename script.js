@@ -27,6 +27,7 @@ $(document).ready(function(){
 
 			$('.tempMAX_tomorrow').text('Temperatur max: '+data.daily.data[1].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[1].apparentTemperatureMin);
 			$('.wettertext_tomorrow').text(data.daily.data[1].summary);
+			$('.text_week').text(data.daily.summary);
 			icon_tom= data.daily.data[1].icon.toUpperCase();
 
 			console.log(icon);
