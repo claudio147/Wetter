@@ -48,6 +48,7 @@ $(document).ready(function(){
 			}).done(function(data){
 				console.log(data);
 				$('.location').text(data.results[0].address_components[1].long_name);
+				$('.address').text(data.results[0].formatted_address);
 			});
 		});
 	});
