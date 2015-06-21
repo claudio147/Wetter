@@ -24,11 +24,11 @@ $(document).ready(function(){
 		}).done(function(data){
 			$('.temperature').text(data.currently.apparentTemperature+' °C');
 			$('.wettertext').text(data.currently.summary);
-			$('.tempMAX').text('Temperatur max: '+data.daily.data[0].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[0].apparentTemperatureMin);
+			$('.tempMAX').text('Temperatur max: '+data.daily.data[0].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[0].apparentTemperatureMin+' °C');
 			$('.footer').text(data.flags["metno-license"]);
 			icon= data.currently.icon.toUpperCase();
 
-			$('.tempMAX_tomorrow').text('Temperatur max: '+data.daily.data[1].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[1].apparentTemperatureMin);
+			$('.tempMAX_tomorrow').text('Temperatur max: '+data.daily.data[1].apparentTemperatureMax+' °C | Temperatur min: '+ data.daily.data[1].apparentTemperatureMin+' °C');
 			$('.wettertext_tomorrow').text(data.daily.data[1].summary);
 			$('.text_week').text(data.daily.summary);
 			icon_tom= data.daily.data[1].icon.toUpperCase();
